@@ -1,0 +1,37 @@
+echo Machine name is:
+read MACHNAME
+echo "\033]0;$MACHNAME\007"
+echo If you have anything else type it here and hit enter, if not hit control + c.
+read WHATEVERYT
+echo "\033]0;$MACHNAME $WHATEVERYT\007"
+echo Almost done, keep going if you have cudahashcat on your system, if not hit control + c!
+read THWN
+echo Would you like to enter Hashcat and set the in hash file? If so type your hash and hit enter.
+read HASHCAT0
+cd ./cudaHashcat-1.31
+echo What is your input hashfile?
+read INHASH
+echo $HASHCAT0 > $INHASH
+echo What is your hash out file?
+read HASHOUT
+echo What hash type?
+read HASHTYPE1
+echo What is your attack type?
+read ATTACKTYPE
+./cudaHashcat64.bin -m $HASHTYPE1 -a $ATTACKTYPE $INHASH --increment ?a?a?a?a?a?a?a?a?a?a?a?a -o $HASHOUT
+echo Cracked!
+read QWCGHE
+echo Would you like to crack another hash? If so type your hash and hit enter.
+read HASHCAT
+echo $HASHCAT > $INHASH
+echo What hash type?
+read HASHTYPE42
+echo What attack type?
+read QDGBKT
+./cudaHashcat64.bin -m $HASHTYPE42 -a $QDGBKT $INHASH --increment '?a?a?a?a?a?a?a?a?a?a?a?a' -o $HASHOUT
+echo Cracked!
+echo If you want the pwd for this to be in the tab name hit enter if not just Control + c
+read DHFFGJGHJGHJG
+echo "\033]0;$MACHNAME $PWD $QWERTY\007"
+
+
